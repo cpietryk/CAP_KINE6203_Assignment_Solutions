@@ -257,8 +257,8 @@ trapArea=(height/2)*(base1+base2) %THis calculates the area in in^2 of a
 % Write some code that prompts the user to input total revenues and total 
 % costs and then calculates the ROI and stores the value in a variable called
 % ROI.
-TotRev=input("What is your total revenue  ")
-TotCos=input("What is your total costs  ")
+TotRev=input("What is your total revenue in dollars ")
+TotCos=input("What is your total costs in dollars ")
 ROI=((TotRev-TotCos)/(TotCos))*100 %Outputs percent roi given input cost and revenue
 
 
