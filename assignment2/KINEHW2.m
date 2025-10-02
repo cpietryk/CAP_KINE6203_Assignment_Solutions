@@ -3,9 +3,11 @@
 %Date:10/1/25
 %Description: Tic-Tac-Toe Game. This code generates a tic-tac-toe gameboard
 %and allows the user to play a game of tic-tac-toe against the computer. It
-%asks the user to play and if they want to go first. The code then uses a
-%numerous amount of if statements to respond accordingly to every single
-%scenario, making the program unbeatable.
+%asks the user to play and if they want to go first. The user picks their 
+%desired space by typing in the space number they want to occupy and by 
+% hitting enter. The code then uses a numerous amount of if statements to 
+%respond accordingly to every single scenario, making the program 
+%unbeatable.
 %% Code
 close all, clear all, clc %Clear Everything
 response=input('Welcome, would you like to play a game of Tic-Tac-Toe? Y or N\n','s');
@@ -61,6 +63,8 @@ if strcmpi(response,'Y')||strcmpi(response,'yes') %Ensures casing does not matte
         for turn=1:9 %Length of game
         UserPick=input("Pick a space by typing in the space number and hitting enter\n",'s'); %Takes in string
         figure(fig)
+        %AI was used to figure out how to not cause an error when something
+        %that wasn't a number was chosen
         UserPick=str2double(UserPick); %This turns the string into a number or NaN, so if the user picks anything it won't crash
     %Don't let user screw up game
     %While loop goes until user picks something that exists
@@ -165,7 +169,7 @@ if strcmpi(response,'Y')||strcmpi(response,'yes') %Ensures casing does not matte
     elseif D2==15||D2==3
         plot([0 9],[0 9],'r-','LineWidth',3)
         break
-    elseif sum(MatrixBoard<1,'all')==0
+    elseif sum(MatrixBoard<1,'all')==0 %If everything is filled then this will produce a matrix of 0's
         break
     end
         end
