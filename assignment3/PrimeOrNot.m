@@ -1,0 +1,56 @@
+function ToF=PrimeOrNot(num)
+% This function takes in a single numeric input and used the built-in
+% isprime command to determine whether the number is prime or not. It
+% returns true if the input is prime and false if it is not
+%
+% Inputs:
+% (1) Single numeric value
+% Outputs:
+% (1) Logical 1 or 0
+%
+% Example:
+% ToF=PrimeOrNot(1) calculates if 1 is prime or not and returns true if 
+% yes or false if no
+%
+% Author: Christopher Pietryk
+% Date: 10/22/25
+% Version: MATLAB R2025a
+
+%% Error Message
+%Input needs to be single numeric value
+if length(num)~=1
+    error('The function needs a single numeric input')
+else
+%% Calculate if prime or not
+ToF=isprime(num); %This command returns 1 if it is prime 0 if not
+%% If you want to get extra
+% switch num
+%     case 0
+%         ToF=false;
+%     case 1
+%         ToF=false;
+%     case 2
+%         ToF=true;
+%     case 3
+%         ToF=true;
+%     case 4
+%         ToF=false;
+%     case 5
+%         ToF=true;
+%     case 6
+%         ToF=false;
+%     case 7
+%         ToF=true;
+%     case 8
+%         ToF=false;
+%     case 9
+%         ToF=false;
+%     otherwise
+%         if rem(num,2)~=0 && rem(num,3)~=0 && rem(num,4)~=0 && rem(num,5)~=0 && rem(num,6)~=0 && rem(num,7)~=0 && rem(num,8)~=0 && rem(num,9)~=0
+%             ToF=true;
+%         else
+%             ToF=false;
+%         end
+% end
+end
+end
