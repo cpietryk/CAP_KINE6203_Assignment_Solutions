@@ -1,0 +1,17 @@
+Name=input('Please input your name for cool factor','s');
+Person=0;
+N=0;
+for T=1:length(Name)
+    Person(T)=Name(T);
+    if Person(T)=='a'||Person(T)=='A'
+        N=N+1;
+    end
+    if Person(T)=='r'||Person(T)=='R'
+        N=N+2;
+    end
+end
+if N==1
+    fprintf('You are cool');
+elseif N==2
+    fprintf('You are not cool');
+else
