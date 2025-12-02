@@ -1,14 +1,14 @@
 function CounterL2H(num1,num2)
-% This function takes in two single integer values and displays a counter
-% from the lower number to the higher number by finding out which number is
-% lower and using a while loop to add to the lower number and store and 
-% display the value each time it goes up.
+%  This function takes in two single integer values and displays a counter
+%  from the lower number to the higher number by finding out which number is
+%  lower and using a while loop to add to the lower number and store and 
+%  display the value each time it goes up.
 %
-% Inputs:
-% (1) Single integer value
-% (2) Single integer value
-% Outputs:
-% (0) Counter from the lower number to the higher number
+%  Inputs:
+%  (1) Single integer value
+%  (2) Single integer value
+%  Outputs:
+%  (0) Counter from the lower number to the higher number
 %
 % Example:
 % CounterL2H(1,2) will display a counter going up by 1 from 1 to 2
