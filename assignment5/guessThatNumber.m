@@ -17,7 +17,8 @@ function guessThatNumber()  % *** WARNING: CONTAINS INTENTIONAL BUGS! ***
 %     OUTPUTS: None
 %
 %---------------------------------------------------------------
-
+%Note: The bug, how it was fixed, and how it was corrected is below the
+%line of code fixed.
 beginner = 1;               % beginner level #
 moderate = 2;               % moderate level #
 advanced = 3;               % advanced level #
@@ -51,7 +52,7 @@ while level ~= beginner && level ~= moderate && level ~= advanced
 % was typed in for the level, and it still stated that this was an invalid
 % level selection even though it should be valid.
 % Correction: I corrected this by replacing the or symbols with and (&&)
-% symbols ensuring that if 1,2, and 3 were not typed in it would show this
+% symbols ensuring that if 1,2, and 3 were not typed in, it would show this
 % input as invalid as intended.
 fprintf('Sorry, that is not a valid level selection.\n')
 level = input('Please re-enter a level of play (1-3): ');
@@ -74,7 +75,7 @@ highest = advancedHighest;
 % variable that was not predefined because MATLAB is case sensitive. 
 % How it was found:The function was run as normal with the 3 level being
 % chosen but an error occurred stating that highest could not be assigned 
-% to an unrecognized variable .
+% to an unrecognized variable.
 % Correction: I corrected this by capitalizing the h in advancedhighest to
 % match the predefined advancedHighest variable in the function
 end
@@ -121,8 +122,8 @@ fprintf('\nEnter a guess (1-%d): ', highest);
 userGuess = input('');
 while userGuess < 1 || userGuess > highest
 % Bug Fix: 
-% Bug: The bug was that if the the user guess was > or equal to the highest
-% it would show as an invalid guess and make the user redo the guess
+% Bug: The bug was that if the the user guess was equal to the highest
+% it would show as an invalid guess and make the user redo the guess,
 % however this is a valid guess.
 % How it was found: I ran the function as stated before by typing in the
 % highest number in the range on the easiest difficulty, but it stated that
@@ -149,7 +150,7 @@ if userGuess < secretNumber
 % conditionals. This can't be the case and is incorrect if you want to
 % print that the guess was too low.
 % How it was found: I read through the function before running to see if
-% any MATLAB identified any immediate errors, and MATLAB recognized a fatal
+% MATLAB identified any immediate errors, and MATLAB recognized a fatal
 % error of the first two statements being the same conditionals.
 % Correction: I corrected this by changing the > symbol to a < symbol,
 % correctly printing that the guess was too low (lower than the secret
@@ -170,8 +171,9 @@ fprintf('\nCongratulations!  You got %d in %d tries.\n\n', ...
 % everything else was corrected, and it kept displaying the number of tries
 % and secret number as the same in the congrats message which was not the
 % case.
-% Correction: I corrected this by making the second input an array with the
-% secret number and number of tries variables.
+% Correction: I corrected this by making the second input of the fprintf 
+% function an array with the secret number and number of 
+% tries variables.
 end
 % Bug Fix: 
 % Bug: The bug was that between the two while loops and one if statement
@@ -190,7 +192,7 @@ fprintf('Game Over. Thanks for playing the Guess That Number game.\n\n');
 % a number was typed in.
 % How it was found: I found this by running the function when all of the
 % fatal errors were corrected and it displayed game over every time I typed
-% in a guess and would continue to prompt me for more if I was correct.
+% in a guess and would continue to prompt me for more if I was incorrect.
 % Correction: I corrected this by moving the fprintf function displaying
 % game over down and outside of the while loop (after end statement).
 
